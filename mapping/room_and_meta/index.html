@@ -12,26 +12,28 @@
         <meta name="author" content="Saplonily">
       
       
-        <link rel="canonical" href="https://saplonily.top/celeste_modding_tutorial/">
+        <link rel="canonical" href="https://saplonily.top/celeste_modding_tutorial/mapping/room_and_meta/">
       
       
+        <link rel="prev" href="../loenn_basic/">
       
-        <link rel="next" href="mapping/basic_env/">
+      
+        <link rel="next" href="../reference/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Celeste Mod 制作教程</title>
+        <title>房间属性与元数据 - Celeste Mod 制作教程</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="css/content.css">
+      <link rel="stylesheet" href="../../css/content.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -88,9 +85,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="Celeste Mod 制作教程" class="md-header__button md-logo" aria-label="Celeste Mod 制作教程" data-md-component="logo">
+    <a href="../.." title="Celeste Mod 制作教程" class="md-header__button md-logo" aria-label="Celeste Mod 制作教程" data-md-component="logo">
       
-  <img src="assets/images/favicon.png" alt="logo">
+  <img src="../../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              首页
+              房间属性与元数据
             
           </span>
         </div>
@@ -233,9 +230,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Celeste Mod 制作教程" class="md-nav__button md-logo" aria-label="Celeste Mod 制作教程" data-md-component="logo">
+    <a href="../.." title="Celeste Mod 制作教程" class="md-nav__button md-logo" aria-label="Celeste Mod 制作教程" data-md-component="logo">
       
-  <img src="assets/images/favicon.png" alt="logo">
+  <img src="../../assets/images/favicon.png" alt="logo">
 
     </a>
     Celeste Mod 制作教程
@@ -259,19 +256,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -282,7 +270,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -291,18 +278,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -318,7 +307,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             地图制作
@@ -332,7 +321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mapping/basic_env/" class="md-nav__link">
+      <a href="../basic_env/" class="md-nav__link">
         
   
   
@@ -355,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mapping/mod_structure/" class="md-nav__link">
+      <a href="../mod_structure/" class="md-nav__link">
         
   
   
@@ -378,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mapping/loenn_basic/" class="md-nav__link">
+      <a href="../loenn_basic/" class="md-nav__link">
         
   
   
@@ -398,10 +387,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="mapping/room_and_meta/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -412,6 +408,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -424,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mapping/reference/" class="md-nav__link">
+      <a href="../reference/" class="md-nav__link">
         
   
   
@@ -447,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mapping/dialog/" class="md-nav__link">
+      <a href="../dialog/" class="md-nav__link">
         
   
   
@@ -515,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="code_modding/env/" class="md-nav__link">
+      <a href="../../code_modding/env/" class="md-nav__link">
         
   
   
@@ -555,8 +552,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -575,25 +570,9 @@
   
 
 
-<h1 id="_1">首页</h1>
-<p>新的时代需要更多 mapper！欢迎你来到制图大家庭！<br />
-这里是一个蔚蓝制图教程(<del>由一个非 mapper 制作</del>)，包含从制图软件的下载，使用，最基础的 mod 创建到常见实体/机制/概念及发布你的地图等内容。<br />
-本教程大部分资源来源于<a href="https://space.bilibili.com/240308518">电箱</a>的作图教程(<a href="https://space.bilibili.com/240308518/channel/collectiondetail?sid=802075">1 代</a>和<a href="https://space.bilibili.com/240308518/channel/collectiondetail?sid=1258682"> 2 代</a>)，以及制图群（633125440）内的各种零碎的文档. 如果你已经做好制图的准备了，那么就从<a href="mapping/basic_env/">安装 Loenn 与游戏配置</a> 开始你的制图之旅吧。  </p>
-<p>借物表：</p>
-<ul>
-<li>电箱 - <a href="https://space.bilibili.com/240308518">https://space.bilibili.com/240308518</a><ul>
-<li>制图教程 1 代 - <a href="https://space.bilibili.com/240308518/channel/collectiondetail?sid=802075">https://space.bilibili.com/240308518/channel/collectiondetail?sid=802075</a></li>
-<li>制图教程 2 代 - <a href="https://space.bilibili.com/240308518/channel/collectiondetail?sid=1258682">https://space.bilibili.com/240308518/channel/collectiondetail?sid=1258682</a></li>
-</ul>
-</li>
-<li>Celeste 蔚蓝制图群 - 6331235440<ul>
-<li>冬菜 - Mod 制作教程</li>
-<li>rifs - 香蕉网传图教程</li>
-<li>zzm - 对话宝典</li>
-</ul>
-</li>
-<li>BiliBili Wiki - <a href="https://wiki.biligame.com/celeste">https://wiki.biligame.com/celeste</a></li>
-</ul>
+  <h1>房间属性与元数据</h1>
+
+
 
 
 
@@ -642,10 +621,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.tabs.link"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>
