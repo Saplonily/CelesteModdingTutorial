@@ -333,7 +333,7 @@
 - `BackgroundMusic`：选章界面的背景音乐
 - `BackgroundAmbience`：选章界面的环境音
 
-对于镜头的位置，在 `Everest` 调试模式中可以按下默认 ++space++ 键进行自由移动，鼠标左键拖动视角，默认 ++w++ ++s++ ++a++ ++d++ 向前 向后 向左 向右移动位置，然后抄写左上角的信息：
+对于镜头的位置，在 `Everest` 调试模式中可以按下默认 ++space++ 键进行自由移动，然后移动到合适的位置就可以抄写左上角的信息了：
 
 ![eve-mountain-camera-info](imgs/eve-mountain-camera-info.png)  
 
