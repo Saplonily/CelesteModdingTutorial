@@ -1,0 +1,1628 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Celeste Modding Tutorial">
+      
+      
+        <meta name="author" content="Saplonily">
+      
+      
+        <link rel="canonical" href="https://saplonily.top/celeste_modding_tutorial/mapping/room_meta_text/">
+      
+      
+        <link rel="prev" href="../loenn_basic/">
+      
+      
+        <link rel="next" href="../../shared/graphics_dump/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>房间属性，元数据，文本 - Celeste Mod 制作教程</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../css/content.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Celeste Mod 制作教程" class="md-header__button md-logo" aria-label="Celeste Mod 制作教程" data-md-component="logo">
+      
+  <img src="../../assets/images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Celeste Mod 制作教程
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              房间属性，元数据，文本
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Saplonily/CelesteModdingTutorial" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Saplonily/CelesteModdingTutorial
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Celeste Mod 制作教程" class="md-nav__button md-logo" aria-label="Celeste Mod 制作教程" data-md-component="logo">
+      
+  <img src="../../assets/images/favicon.png" alt="logo">
+
+    </a>
+    Celeste Mod 制作教程
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Saplonily/CelesteModdingTutorial" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Saplonily/CelesteModdingTutorial
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    地图制作
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            地图制作
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    软件安装, 游戏配置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mod 结构
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loenn_basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Loenn 基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    房间属性，元数据，文本
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    房间属性，元数据，文本
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      更多房间属性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stylegrounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stylegrounds
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      地图元数据
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="地图元数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件内元数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件外元数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bc" class="md-nav__link">
+    <span class="md-ellipsis">
+      B，C 面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      其它地图自定义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dialog 文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成的键名
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shared/graphics_dump/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphics Dump
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    常用参考
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dialog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dialog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    皮肤 Mod 制作
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            皮肤 Mod 制作
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shared/graphics_dump/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphics Dump
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Code Mod 制作
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Code Mod 制作
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code_modding/env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    环境配置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      更多房间属性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stylegrounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stylegrounds
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      地图元数据
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="地图元数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件内元数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件外元数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bc" class="md-nav__link">
+    <span class="md-ellipsis">
+      B，C 面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      其它地图自定义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dialog 文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成的键名
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">房间属性，元数据，文本</h1>
+<h2 id="_2">更多房间属性</h2>
+<p>在前面我们只指明了房间的名称，当然，还有很多其他的属性：</p>
+<p><img alt="new-room" src="../imgs/new-room.png" />  </p>
+<p>按照顺序它们分别是：</p>
+<ul>
+<li><code>Room Name</code>：房间名称</li>
+<li><code>Colour</code>：在游戏内 F6 地图中显示的颜色</li>
+<li><code>X</code>：房间横坐标（单位 tile）</li>
+<li><code>Y</code>：房间纵坐标（单位 tile）</li>
+<li><code>Width</code>：房间宽度</li>
+<li><code>Height</code>：房间高度</li>
+<li><code>Camera Offset X</code>：房间默认的镜头横坐标偏移（单位 tile）</li>
+<li><code>Camera Offset Y</code>：房间默认的镜头纵坐标偏移（单位 tile）</li>
+<li><code>Wind Pattern</code>：房间起始刮风的类型</li>
+<li><code>Underwater</code>：整个房间是否都在水下</li>
+<li><code>Space</code>：房间是否具有 8AB 结尾的低重力和上下贯通效果</li>
+<li><code>Disable Down Transition</code>：是否禁用向下切板（掉下去直接死即使有房间接邻），在官图 7AB 中大量用到</li>
+<li><code>Checkpoint</code>：房间是否是一个记录点，也就是作为地图新的一节的第一面</li>
+<li><code>Dark</code>：是否降低房间亮度，与 5A 变黑效果相同</li>
+<li><code>Whisper</code>：背景是否有人声倒放（5A的效果）</li>
+<li><code>Music Layer X</code>：是否启用第 X 层的音乐</li>
+<li><code>Music</code>：音乐 ID</li>
+<li><code>Music Progress</code>：音乐的进度</li>
+<li><code>Ambience</code>：环境音</li>
+<li><code>Ambience Progress</code>：环境音的进度</li>
+</ul>
+<p>其中关于音乐的部分会在后面说到。  </p>
+<div class="admonition info">
+<p class="admonition-title">对于风的类型有这些：</p>
+<ul>
+<li><code>Left</code>：左风（<code>400px/s</code>）</li>
+<li><code>Right</code>：右风（<code>400px/s</code>）</li>
+<li><code>LeftStrong</code>：左强风（<code>800px/s</code>）</li>
+<li><code>RightStrong</code>：右强风（<code>800px/s</code>）</li>
+<li><code>LeftOnOff</code>：左间歇风（<code>800px/s</code>，<code>3s</code>）</li>
+<li><code>RightOnOff</code>：右间歇风（<code>800px/s</code>，<code>3s</code>）</li>
+<li><code>LeftOnOffFast</code>：左快速间歇风（<code>800px/s</code>，<code>2s</code>）</li>
+<li><code>RightOnOffFast</code>：右快速间歇风（<code>800px/s</code>，<code>2s</code>）</li>
+<li><code>Alternating</code>：左右交替间歇风（<code>400px/s</code>，<code>3s 风 2s 停</code>）</li>
+<li><code>LeftGemsOnly</code>：仅在玩家携带草莓籽时挂左风（<code>400px/s</code>）</li>
+<li><code>RightCrazy</code>：右极强风，出现于官图 4C 第三面（<code>1200px/s</code>）</li>
+<li><code>Down</code>：下风（<code>300px/s</code>）</li>
+<li><code>Up</code>：上风（<code>400px/s</code>）</li>
+<li><code>Space</code>：上风，出现于官图 9-9（<code>600px/s</code>）</li>
+</ul>
+</div>
+<h2 id="stylegrounds">Stylegrounds</h2>
+<p>到目前我们的房间背景还是漆黑的一片，到这一节你就可以为背景增添一些色彩了。  </p>
+<p><code>Stylegrounds</code> 是属于每个房间的，不过大概是因为大部分房间共享同一组 <code>Stylegrounds</code>，实际上我们需要在地图的属性中去编辑它。在 Loenn 中它在 <code>Map-&gt;Stylegrounds</code> 中。  </p>
+<p><img alt="loenn-stylegrounds" src="../imgs/loenn-stylegrounds.png" />  </p>
+<p>不要被一上来的一大堆属性吓到了，实际上中间这一堆属性是 Loenn 默认选中的 <code>Parallax</code> 的属性，为了简单起见，你可以在左下角的下拉框中选择 <code>Black Hole</code>，就如字面意思，它是官图 9A 中背景的黑洞。这时点击右边的 <code>New</code> 按钮即可添加进去，不过在此之前你需要注意一下左上角的 <code>Foreground</code> 和 <code>Background</code> 的选择，由于黑洞这个 <code>Styleground</code> 是完全不透明且是一个背景，那么我们需要选择 <code>Background</code>，然后再点击 <code>New</code>，这时候属性列表就简单一些了：  </p>
+<p><img alt="loenn-blackhole-eg" src="../imgs/loenn-blackhole-eh.png" />  </p>
+<p>对于黑洞这个 <code>Styleground</code> 来说，有如下属性：</p>
+<ul>
+<li><code>Rooms</code>：要显示黑洞的房间名，支持通配符（<code>*</code> 匹配任何字符），用逗号分隔（注意别用中文逗号，将输入法切换到英文模式再输入），例如 <code>a_00,a_01,a_alt,b_*</code>，它除了会在前面声明的三个 <code>a_</code> 房间显示外，在任何名字以 <code>b_</code> 开头的房间也会显示，这就是为什么会推荐这种房间命名格式。</li>
+<li><code>Exclude</code>：要取消显示的房间名，与 <code>Rooms</code> 格式相同，当 <code>Rooms</code> 里被指定了的房间名，例如上面可能会出现的 <code>b_alt</code>，你可能不希望对这个房间显示黑洞，你就需要在这里写一条 <code>b_alt</code>。</li>
+<li><code>Tag</code>：标记，主要用于在代码中引用这个 <code>Styleground</code>。</li>
+<li><code>Flag</code>：除了设置房间名以显示隐藏 <code>Styleground</code> 外，还能通过 <code>Flag</code> 控制，仅在 <code>Flag</code> 开启时显示。</li>
+<li><code>Not Flag</code>：当 <code>Not Flag</code> 开启时隐藏。</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Flag</p>
+<p><code>Flag</code> 是一种“开关”，我们将在下一章介绍它。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">悬浮提示</p>
+<p>在 Loenn 中如果你看属性名字看不懂字面意思时，你可以将鼠标悬浮在属性名字上，有些时候它会显示一条更详细的说明，例如上述的 <code>Rooms</code>：<br />
+<img alt="loenn-rooms-tooltip" src="../imgs/loenn-rooms-tooltip.png" />  </p>
+<blockquote>
+<p>决定哪些房间这个特效会显示。房间名字用逗号分隔，并且支持通配符。比如：“`a00,b00,c*”。</p>
+</blockquote>
+</div>
+<p>当添加了一个 <code>Styleground</code> 后，左边的列表就新增了一项，游戏会按照它们排列的顺序依次绘制，也就是说在列表最上方的在最底层，在列表最下方的在最顶层。在 Loenn 中选中一项后可以点击右边的 <code>Move Up</code> 和 <code>Move Down</code> 进行上下移动。顺便，更新 <code>Styleground</code> 的属性和更新物体的属性一样也要手动点击 <code>Update</code> 进行更新。<br />
+除此之外还有一小部分 <code>Styleground</code> 有 <code>Colour</code> 属性，顾名思义它指明了颜色。再然后就是一个常用且万能的 <code>Parallax</code>，它常见地被用来创建背景以及视差背景，它的参数很多：  </p>
+<p><img alt="tons-props-of-parallax" src="../imgs/tons-props-of-parallax.png" />  </p>
+<ul>
+<li><code>Texture</code>：要显示的贴图路径</li>
+<li><code>Only</code>：和上述的 <code>Rooms</code> 属性一样，表示要显示的房间</li>
+<li><code>Exclude</code>，<code>Tag</code>，<code>Flag</code>，<code>Not Flag</code>：均和 <code>Black Hole</code> 一致</li>
+<li><code>Blend Mode</code>：混合模式，即该 <code>Parallax</code> 如果是透明的话如何与现有画面混合，默认为 <code>alphablend</code>，也就是比较符合直觉的混合方式。<code>additive</code> 加法混合模式，通常用于将光，火焰等透明发光贴图混合，最终的画面通常看上去会“变亮”</li>
+<li><code>Colour</code>：对该 <code>Parallax</code> 的贴图进行调色</li>
+<li><code>X</code>，<code>Y</code>：贴图的相对偏移，单位 <code>px</code></li>
+<li><code>Scroll X</code>，<code>Scroll Y</code>：镜头移动时贴图的偏移幅度，单位 <code>px</code>，当为 <code>1</code> 时，背景会跟随镜头一起移动，就像玩家和贴图在同一图层一样。当值小于 <code>1</code> 时，视觉上会感觉贴图在更远一些的地方，数值越小越远，为 <code>0</code> 则不会随镜头而移动。当为负数时移动方向反向，当大于 <code>1</code> 时，hm，&#8203;<del>会很晕，不想被玩家打的话别试</del></li>
+<li><code>Speed X</code>，<code>Speed Y</code>：背景自然移动的速度，单位 <code>px/s</code>。例如用于云类型背景的自然飘动。</li>
+<li><code>Fade X</code>，<code>Fade Y</code>：贴图随镜头中心位置的不透明度渐变。例如 <code>n500-500,0-1</code>，表示<strong>全局坐标系</strong>中当镜头从 <code>-500</code> 到 <code>500</code> 时不透明度从 <code>0</code> 渐变到 <code>1</code>，因为 <code>-</code> 符号被占用表示范围，所以使用字母 <code>n</code> 表示负号。可以使用 <code>:</code> 分隔指定多个范围：<code>0-400,0-0.3:400-800,0.3-0</code>，当多个范围有重叠时，最终不同范围的结果将相乘得到最终的不透明度。</li>
+<li><code>Flip X</code>，<code>Flip Y</code>：是否横向/纵向翻转贴图</li>
+<li><code>Fade In</code>：当切面过来时是否要渐变</li>
+<li><code>Instant In</code>：是否切面途中就要进行渐变而不是切完面后再渐变</li>
+<li><code>Instant Out</code>：是否切面出去途中就直接隐藏</li>
+<li><code>Loop X</code>，<code>Loop Y</code>：是否要循环平铺贴图</li>
+</ul>
+<p><del><code>Parallax</code> 确实没有 <code>Fade Out</code> 这个属性，我没写漏你也没看漏，或许官图认为一般要隐藏一个背景时就要显示另一个背景所以不需要一个 <code>Fade Out</code> 吧</del>  </p>
+<p>对于固定在背景的一张图，一般会设置 <code>Loop</code> 全关掉，<code>Scroll</code> 也全设置为 <code>0</code>，这样这张图就被“钉”在背景上了。对于为了创造视差的背景，一般会保持 <code>Loop</code> 打开，<code>Scroll</code> 根据想要造成视差的程度来调整，越远越小。  </p>
+<p>好的那么说了这么多你会发现……“贴图路径”是什么，它怎么填你还不知道。这时就要用到 <code>Graphics</code> 文件夹了，不过在此之前你可以拿几个官图就有的贴图来尝试一下上面的属性的效果：</p>
+<ul>
+<li><code>bgs/04/bg0</code>：4A 的云背景（横向循环）</li>
+<li><code>bgs/01/bg0</code>，<code>bgs/01/bg1</code>，<code>bgs/01/bg2</code>：1A 的城市背景（静态）</li>
+<li><code>bgs/10/granny/bg</code>：9A 结尾见奶奶时的背景（静态）</li>
+<li><code>bgs/03/bg0</code>，<code>bgs/03/bg1</code>：3A 开头形成视差的两簇云</li>
+</ul>
+<p>那么现在是同样的 <code>Graphics</code> 文件夹套娃：</p>
+<ul>
+<li>📁 <code>Graphics</code><ul>
+<li>📁 <code>Atlases</code><ul>
+<li>📁 <code>Gameplay</code><ul>
+<li>📁 <code>bgs</code><ul>
+<li>📁 <code>MyFirstMod</code><ul>
+<li>📄 <code>awesome_bg.png</code></li>
+<li>📄 <code>another_cool_bg.png</code></li>
+<li>📄 <code>awesome_bg_2.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>然后你就可以使用 <code>bgs/MyFirstMod/awesome_bg</code> 来作为路径引用你的贴图了。注意图片格式必须为 <code>.png</code> 格式且有 <code>.png</code> 后缀。</p>
+<div class="admonition warning">
+<p class="admonition-title"><code>.png</code> 格式</p>
+<p>请<strong>不要</strong>将一张 <code>.jpg</code> 或其它格式的图片<strong>仅通过</strong>改后缀名的形式让它“转换”为另一种格式，虽然它依然能打开但这是图片查看器的功劳而<strong>不是</strong>你的。你需要使用任何图片编辑器或者查看器打开你的其它格式的图片，然后在菜单中寻找“另存为...”并在格式选择的下拉框中选择 <code>.png</code> 然后保存，这样你才得到了一个真正的 <code>.png</code> 图片。<br />
+<img alt="image-save-as" src="../imgs/image-save-as.png" /><br />
+<img alt="select-png-format" src="../imgs/select-png-format.png" /></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">路径分隔符</p>
+<p>虽然 <code>Everest</code> 在某些地方会支持使用 <code>\</code> 作为路径分隔符，但是以防万一我们建议<strong>只</strong>使用 <code>/</code> 作为路径分隔符。</p>
+</div>
+<h2 id="_3">地图元数据</h2>
+<h3 id="_4">文件内元数据</h3>
+<p>地图有两种元数据，一种写在地图文件里面，一种写在地图文件外面，这里我们先看看地图文件里面的元数据有些什么，这部分内容可以在 Loenn 菜单 <code>Map-&gt;Metadata</code> 中找到：</p>
+<p><img alt="map-metadata" src="../imgs/map-metadata.png" />  </p>
+<p>可以看到它们被分为了四栏：</p>
+<ul>
+<li><code>General</code>：通用的属性</li>
+<li><code>Overworld</code>：选章界面的属性</li>
+<li><code>XML</code>：XML 相关属性</li>
+<li><code>Music</code>：音乐相关属性</li>
+</ul>
+<p><code>General</code> 中的属性比较杂：</p>
+<ul>
+<li><code>Intro Type</code>：进入地图的动画类型<ul>
+<li><code>Respawn</code>：使用重生动画</li>
+<li><code>WalkInRight</code>：从地图右侧同一高度走到重生点</li>
+<li><code>WalkInLeft</code>：从地图左侧同一高度走到重生点</li>
+<li><code>Jump</code>：跳跃进入（1A）</li>
+<li><code>WakeUp</code>：醒来（2A）</li>
+<li><code>Fall</code>：从出生点一直往下掉落，直到碰到水（6A）</li>
+<li><code>TempleMirrorVoid</code>：5A 从镜中世界虚空中醒来，需要使用代码辅助。&#8203;<del>否则玛德琳就无法醒过来了</del></li>
+<li><code>ThinkForABit</code>：9A 开头的动画</li>
+<li><code>None</code>：无动画</li>
+</ul>
+</li>
+<li><code>Colour Grade</code>：要使用的色阶图，这会在后面提到</li>
+<li><code>Wipe</code>：重生及复活时用到的黑屏动画<ul>
+<li><code>Angled</code>：1ABC 中使用</li>
+<li><code>Curtain</code>：序章和尾声中使用</li>
+<li><code>Dream</code>：2ABC 中使用</li>
+<li><code>Drop</code>：5ABC 中使用</li>
+<li><code>Fade</code>：渐变，官图中用于其它地方</li>
+<li><code>Fall</code>：6ABC 中使用</li>
+<li><code>Heart</code>：8ABC 中使用</li>
+<li><code>KeyDoor</code>：3ABC 中使用</li>
+<li><code>Mountain</code>：7ABC 中使用</li>
+<li><code>Spotlight</code>：聚光灯，官图中用于其它地方</li>
+<li><code>Starfield</code>：9A 中使用</li>
+<li><code>Wind</code>：4ABC 中使用</li>
+</ul>
+</li>
+<li><code>Darkness Alpha</code>：黑暗程度（<code>0~1</code>），越大地图越黑，<code>Styleground</code> 不受影响</li>
+<li><code>Bloom Base</code>：地图泛光强度基值，具体会在后面提到</li>
+<li><code>Bloom Strength</code>：地图泛光强度，具体会在后面提到</li>
+<li><code>Core Mode</code>：默认的核心模式，即 8ABC 的冰或火模式</li>
+<li><code>Starting Inventory</code>：初始的“物品栏”，以单冲，启用了果冻，有背包，落地恢复冲刺为基准，有：<ul>
+<li><code>Prologue</code>：序章，无冲，不启用果冻</li>
+<li><code>Default</code>：默认</li>
+<li><code>OldSite</code>：2A，不启用果冻</li>
+<li><code>CH6End</code>：6A 结尾，双冲</li>
+<li><code>TheSummit</code>：7ABC，双冲，无背包</li>
+<li><code>Core</code>：8ABC，双冲，不恢复冲刺</li>
+<li><code>Farewell</code>：9A，无背包</li>
+</ul>
+</li>
+<li><code>Starting Room</code>：起始房间</li>
+<li><code>Postcard Sound ID</code>：明信片音效 ID，这会在后面的音乐章节提到</li>
+<li><code>End Level on Hear</code>：是否在吃心后结束关卡</li>
+<li><code>Seeker Slowdown</code>：是否启用新浪靠近玩家时的一系列效果（该属性的名字和 Loenn 对其效果的描述均不够完全）</li>
+<li><code>Theo In Booster</code>：是否允许玩家在泡泡内时依然持有抓取物（Theo 水晶，水母等）</li>
+<li><code>Dreaming</code>：影响 <code>Stars</code> 这个 <code>Styleground</code> 的效果</li>
+<li><code>Override A-Side Meta</code>：是否覆盖 A 面的元数据（见下面有关 ABC 面的说明）</li>
+<li><code>Interlude</code>：是否这章只是一个“过场”，例如官图的序幕和尾声</li>
+</ul>
+<p><code>Overworld</code> 中的属性在这里基本是设置选章时的一些颜色和图标：  </p>
+<p><img alt="overworld-banner-info" src="../imgs/overworld-banner-info.png" />  </p>
+<p>其中地图图标你需要放置在 <code>Graphics/Atlases/Gui/areas/ThisIsMyName/MyFirstMod</code> 中，文件名字任意比如说 <code>chap1.png</code>，此外还要有个图标的背面 <code>chap1_back.png</code>，然后在元数据中写上 <code>areas/ThisIsMyName/MyFirstMod/chap1</code> 作为路径。地图图标大小必须为 <code>180x180px</code>。<br />
+这些是官图用到的 <code>Title Base Colour</code> 和 <code>Title Accent Colour</code>：</p>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">官图的颜色信息</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">序章/尾声</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">383838, 50afae</span>
+<span class="nt">被遗弃的城市</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6c7c81, 2f344b</span>
+<span class="nt">旧址</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">247f35, e4ef69</span>
+<span class="nt">天空度假山庄</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">b93c27, ffdd42</span>
+<span class="nt">黄金山脊</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff7f83, 6d54b7</span><span class="w"> </span>
+<span class="nt">镜之寺庙</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8314bc, df72f9</span>
+<span class="nt">沉思</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">359fe0, 3c5cbc</span>
+<span class="nt">山顶</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffd819, 197db7</span>
+<span class="nt">核心</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">761008, e0201d</span>
+<span class="nt">再见</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">240d7c, ff6aa9</span><span class="w"> </span>
+</code></pre></div></td></tr></table></div>
+<p>接下来是 <code>XML</code>，不过这会在后面章节拆成三部分来说。<code>Music</code> 部分依然是到音乐相关的章节。</p>
+<h3 id="_5">文件外元数据</h3>
+<p>文件内的元数据是相对比较少的，又由于游戏本体很多元数据实际上硬编码在代码里，所以 <code>Everest</code> 为我们提供了一个外部的文件 <code>.meta.yaml</code> 来声明元数据：</p>
+<ul>
+<li>📄 <code>0-MyFirstMap.bin</code></li>
+<li>📄 <code>0-MyFirstMap.meta.yaml</code></li>
+</ul>
+<p>这个文件的一个例子：</p>
+<div class="admonition info">
+<p class="admonition-title">很长一串 yaml</p>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">0-MyFirstMap.meta.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">Mountain</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ShowSnow</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="w">    </span><span class="nt">FogColors</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">039668</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">039645</span>
+
+<span class="w">    </span><span class="nt">StarFogColor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffffff</span>
+<span class="w">    </span><span class="nt">StarStreamColors</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffffff</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffffff</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffffff</span>
+<span class="w">    </span><span class="nt">StarBeltColors1</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffffff</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffffff</span>
+<span class="w">    </span><span class="nt">StarBeltColors2</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffffff</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffffff</span>
+
+<span class="w">    </span><span class="nt">MountainModelDirectory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Mountain/ThisIsMyName/MyFirstMap&quot;</span>
+<span class="w">    </span><span class="nt">MountainTextureDirectory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ThisIsMyName/MyFirstMap&quot;</span>
+
+<span class="w">    </span><span class="nt">Idle</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-1.374</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.224</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">7.971</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">Target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-0.440</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.499</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">6.358</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Select</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-1.390</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.784</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">7.593</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">Target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-0.052</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.545</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">6.125</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Zoom</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-1.104</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.661</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">7.292</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">Target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-0.324</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.565</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">5.452</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Cursor</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-0.880595</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.8781773</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">6.77277</span><span class="w"> </span><span class="p p-Indicator">]</span>
+
+<span class="w">    </span><span class="nt">State</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">Rotate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">ShowCore</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">BackgroundMusic</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;event:/some_great_music/here&quot;</span>
+<span class="w">    </span><span class="nt">BackgroundAmbience</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;event:/some_great_ambience/here&quot;</span>
+<span class="w">    </span><span class="nt">MarkerTexture</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;marker/ThisIsMyName/MyFirstMod/anAwesomeMarker&quot;</span>
+
+<span class="nt">LoadingVignetteText</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">Dialog</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ThisIsMyName_MyFirstMod_Vignette&quot;</span>
+
+<span class="nt">LoadingVignetteScreen</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">Atlas</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;VignetteScreens/ThisIsMyName/MyFirstMod&quot;</span>
+<span class="w">    </span><span class="nt">Start</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">0.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.0</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Center</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">0.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.0</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">0.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.0</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Title</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">ASide</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ThisIsMyName_MyFirstMod_ASide_Complete&quot;</span>
+<span class="w">        </span><span class="nt">BSide</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ThisIsMyName_MyFirstMod_BSide_Complete&quot;</span>
+<span class="w">        </span><span class="nt">CSide</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ThisIsMyName_MyFirstMod_CSide_Complete&quot;</span>
+<span class="w">        </span><span class="nt">FullClear</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ThisIsMyName_MyFirstMod_ASide_FullClear&quot;</span>
+<span class="w">    </span><span class="nt">Layers</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;layer&quot;</span>
+<span class="w">        </span><span class="nt">Images</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;MyFirstMap&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">0.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.0</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">Scroll</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">0.0</span><span class="w"> </span><span class="p p-Indicator">]</span>
+
+<span class="nt">CompleteScreen</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">Atlas</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Endscreens/ThisIsMyName/MyFirstMod&quot;</span>
+<span class="w">    </span><span class="nt">Start</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">0.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.0</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Center</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">0.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.0</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Offset</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">0.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.0</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Title</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">ASide</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ThisIsMyName_MyFirstMod_ASide_Complete&quot;</span>
+<span class="w">        </span><span class="nt">BSide</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ThisIsMyName_MyFirstMod_BSide_Complete&quot;</span>
+<span class="w">        </span><span class="nt">CSide</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ThisIsMyName_MyFirstMod_CSide_Complete&quot;</span>
+<span class="w">        </span><span class="nt">FullClear</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ThisIsMyName_MyFirstMod_ASide_FullClear&quot;</span>
+<span class="w">    </span><span class="nt">Layers</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;layer&quot;</span>
+<span class="w">        </span><span class="nt">Images</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;chap1&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">0.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.0</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">Scroll</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">0.0</span><span class="w"> </span><span class="p p-Indicator">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>确实，这个文件很长，不过上面所有内容都是可选的，在这里我们暂时只看看大多数 Mod 改了的地方，后续会进行补充：</p>
+<p>这里只会看看 <code>Mountain</code> 下面的属性，也就是与选章界面的背景的 3D 山有关的东西：</p>
+<!--- RIP, 原本打算全写了, 但是还是只提取一部分罢
+
+- `ShowSnow`：是否正在下雪
+- `FogColors`：雾的颜色，不限数量
+- `StarFogColor`：星空中雾的颜色，不限数量
+- `StarStreamColors`：星河的颜色，不限数量
+- `StarBeltColors1`，`StarBeltColors2`：星带，就是那一堆星星的颜色，不限数量
+- `MountainModelDirectory`：自定义山体模型的路径，从 Mod 的最顶级目录开始
+- `MountainTextureDirectory`：自定义山体模型中用到的贴图所在目录，从 `Graphics/Atlases/Mountain` 开始
+- `Idle`，`Select`，`Zoom`：分别是未选择，选择（打开了 ABC 面选择或小节选择），进入时的镜头的位置（`Position`）和所看向的目标位置（`Target`），两个位置不能相同否则会报错
+- `Cursor`：玛德琳小人标记的位置
+- `State`：山体的状态，`0` 为夜晚，`1` 为白天，`2` 为黄昏，`3` 为月球
+- `Rotate`：镜头是否要绕着山转
+- `ShowCore`：山的核心是否打开
+- `BackgroundMusic`：选章界面的背景音乐
+- `BackgroundAmbience`：选章界面的环境音
+- `MarkerTexture`：玛德琳小人标记的贴图动画
+
+> ~~哦我的老天啊这东西怎么这么长~~
+
+-->
+
+<ul>
+<li><code>ShowSnow</code>：是否正在下雪</li>
+<li><code>Idle</code>，<code>Select</code>，<code>Zoom</code>：分别是未选择，选择（打开了 ABC 面选择或小节选择），进入时的镜头的位置（<code>Position</code>）和所看向的目标位置（<code>Target</code>），两个位置不能相同否则会报错</li>
+<li><code>Cursor</code>：玛德琳小人标记的位置</li>
+<li><code>State</code>：山体的状态，<code>0</code> 为夜晚，<code>1</code> 为白天，<code>2</code> 为黄昏，<code>3</code> 为月球</li>
+<li><code>Rotate</code>：镜头是否要绕着山转</li>
+<li><code>ShowCore</code>：山的核心是否打开</li>
+<li><code>BackgroundMusic</code>：选章界面的背景音乐</li>
+<li><code>BackgroundAmbience</code>：选章界面的环境音</li>
+</ul>
+<p>对于镜头的位置，在 <code>Everest</code> 调试模式中可以按下默认 <span class="keys"><kbd class="key-space">Space</kbd></span> 键进行自由移动，鼠标左键拖动视角，默认 <span class="keys"><kbd class="key-w">W</kbd></span> <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-a">A</kbd></span> <span class="keys"><kbd class="key-d">D</kbd></span> 向前 向后 向左 向右移动位置，然后抄写左上角的信息：</p>
+<p><img alt="eve-mountain-camera-info" src="../imgs/eve-mountain-camera-info.png" />  </p>
+<p>如果只需要自定义上述内容，大可直接删掉上面那一个文件的大多数地方：</p>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">0-MyFirstMap.meta.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">Mountain</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ShowSnow</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">Idle</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-1.374</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.224</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">7.971</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">Target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-0.440</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.499</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">6.358</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Select</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-1.390</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.784</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">7.593</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">Target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-0.052</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.545</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">6.125</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Zoom</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-1.104</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.661</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">7.292</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">Target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-0.324</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.565</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">5.452</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">Cursor</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">-0.880595</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.8781773</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">6.77277</span><span class="w"> </span><span class="p p-Indicator">]</span>
+
+<span class="w">    </span><span class="nt">State</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">Rotate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">ShowCore</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="bc">B，C 面</h3>
+<p>向你的图加入 B，C 面很简单，只需要新建一个名字以 <code>-B</code> 或 <code>-C</code> 的 <code>.bin</code> 文件就行了：</p>
+<ul>
+<li>📁 <code>MyFirstMod</code><ul>
+<li>📄 <code>0-MyFirstMap.bin</code></li>
+<li>📄 <code>0-MyFirstMap-B.bin</code></li>
+<li>📄 <code>0-MyFirstMap.meta.yaml</code></li>
+<li>📄 <code>1-MySecondMap.bin</code></li>
+</ul>
+</li>
+</ul>
+<p>不过这里需要注意的是，ABC 面共享元数据以及 <code>meta</code> 文件，如果你需要不同的地图内元数据你需要在 B，C 面地图中勾选之前提到的 <code>Override A-Side Meta</code>。</p>
+<h3 id="_6">其它地图自定义</h3>
+<p>横幅，卡片，围巾，攀爬按钮的贴图也能够自定义，例如你有如下这几个地图：</p>
+<ul>
+<li>📁 <code>MyFirstMod</code><ul>
+<li>📄 <code>0-MyFirstMap.bin</code></li>
+<li>📄 <code>1-MySecondMap.bin</code></li>
+<li>📄 <code>2-MyThirdMap.bin</code></li>
+</ul>
+</li>
+</ul>
+<p>能够自定义的贴图有：<br />
+横幅（<code>title.png</code> <code>accent.png</code>），攀爬按钮（<code>tab.png</code>），卡片（<code>card.png</code> <code>cardtop.png</code> <code>card_golden.png</code> <code>cardtop_golden</code>）：<br />
+<img alt="celeste-banner-imgs" src="../imgs/celeste-banner-imgs.png" /><br />
+攀爬按钮图标（<code>play.png</code> <code>remix.png</code> <code>rmx2.png</code>）：<br />
+<img alt="celeste-play-remix-rmx2-img" src="../imgs/celeste-play-remix-rmx2-img.png" /><br />
+围巾（<code>hover.png</code>）：<br />
+<img alt="celeste-hover-img" src="../imgs/celeste-hover-img.png" />  </p>
+<p>在制作好这些贴图后，命名成同上的名字，然后放置在这些地方：</p>
+<ul>
+<li>📁 <code>Graphics</code><ul>
+<li>📁 <code>Atlases</code><ul>
+<li>📁 <code>Gui</code><ul>
+<li>📁 <code>areaselect</code><ul>
+<li>📁 <code>MyFirstMod</code><ul>
+<li>📄 <code>title.png</code></li>
+<li>📄 <code>accent.png</code></li>
+<li>📄 <code>card.png</code></li>
+<li>📄 <code>card_golden.png</code></li>
+<li>📄 <code>cardtop.png</code></li>
+<li>📄 <code>cardtop_golden.png</code></li>
+<li>📄 <code>tab.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>📁 <code>areas</code><ul>
+<li>📁 <code>MyFirstMod</code><ul>
+<li>📄 <code>hover.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>📁 <code>menu</code><ul>
+<li>📁 <code>MyFirstMod</code><ul>
+<li>📄 <code>play.png</code></li>
+<li>📄 <code>remix.png</code></li>
+<li>📄 <code>rmx2.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>这样会对 <code>MyFirstMod</code> 下的所有地图生效，如果要只针对一个地图生效，只需要在文件名前加上地图文件名和一个下划线，例如：</p>
+<ul>
+<li>📁 <code>Graphics</code><ul>
+<li>📁 <code>Atlases</code><ul>
+<li>📁 <code>Gui</code><ul>
+<li>📁 <code>areaselect</code><ul>
+<li>📁 <code>MyFirstMod</code><ul>
+<li>📄 <code>0-MyFirstMap_title.png</code></li>
+<li>📄 <code>0-MyFirstMap_accent.png</code></li>
+<li>📄 <code>1-MySecondMap_card.png</code></li>
+<li>📄 <code>1-MySecondMap_card_golden.png</code></li>
+<li>📄 <code>1-MySecondMap_cardtop.png</code></li>
+<li>📄 <code>1-MySecondMap_cardtop_golden.png</code></li>
+<li>📄 <code>tab.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>📁 <code>areas</code><ul>
+<li>📁 <code>MyFirstMod</code><ul>
+<li>📄 <code>hover.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>📁 <code>menu</code><ul>
+<li>📁 <code>MyFirstMod</code><ul>
+<li>📄 <code>2-MyThirdMap_play.png</code></li>
+<li>📄 <code>2-MyThirdMap_remix.png</code></li>
+<li>📄 <code>2-MyThirdMap_rmx2.png</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_7">文本</h2>
+<p>当目前为止我们的 Mod 名字和地图名还是一大长串像路径一样的东西，在这一节我们就能够自定义它们了。<br />
+首先你需要创建两个文件到 <code>Dialog</code> 文件夹下：</p>
+<ul>
+<li>📁 <code>Dialog</code><ul>
+<li>📄 <code>English.txt</code></li>
+<li>📄 <code>Simplified Chinese.txt</code></li>
+</ul>
+</li>
+</ul>
+<p>然后写下如下内容：</p>
+<!---- 这不是 ini 但是高亮还挺不错，不是么 -->
+<div class="language-ini highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">English.txt</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">ThisIsMyName_MyFirstMod</span><span class="o">=</span><span class="w"> </span><span class="s">Name of my first mod&#39;s maps!</span>
+<span class="na">ThisIsMyName_MyFirstMod_0_MyFirstMap</span><span class="o">=</span><span class="w"> </span><span class="s">Hi here&#39;s the chapter1!</span>
+</code></pre></div></td></tr></table></div>
+<div class="language-ini highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Simplified Chinese.txt</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">ThisIsMyName_MyFirstMod</span><span class="o">=</span><span class="w"> </span><span class="s">我的 Mod 地图集名称！</span>
+<span class="na">ThisIsMyName_MyFirstMod_0_MyFirstMap</span><span class="o">=</span><span class="w"> </span><span class="s">你好这里是第一章！</span>
+</code></pre></div></td></tr></table></div>
+<p>添加了新的 Dialog 后记得重启游戏，然后你就能看到先前的奇怪路径  </p>
+<p><img alt="non-localized-map-names" src="../imgs/non-localized-map-names.png" />  </p>
+<p>变成了正常的文字：  </p>
+<p><img alt="localized-map-names" src="../imgs/localized-map-names.png" />  </p>
+<p>然后你可能就会遇到这个问题：  </p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Simplified Chinese.txt</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">ThisIsMyName_MyFirstMod</span><span class="o">=</span><span class="w"> </span><span class="s">一个蔚蓝的地图集</span>
+<span class="na">ThisIsMyName_MyFirstMod_0_MyFirstMap</span><span class="o">=</span><span class="w"> </span><span class="s">一张蔚蓝地图的名字</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="missing-chars" src="../imgs/missing-chars.png" /></p>
+<p>蔚蓝中的“蔚蓝”消失了！这是正常的，蔚蓝只能渲染哪些本体就已经有的文字，对于之外的文字就会出现缺字库的问题，你可以前往 <a href="https://maddie480.ovh/celeste/font-generator">Maddie 的字库生成网站</a> 选择中文，然后上传你的 <code>Dialog</code> 文件，也就是 <code>Chinese Simplified.txt</code>，你会得到一份包含了字库的压缩包，然后你需要将压缩包的文件解压到 <code>Dialog/Fonts</code> 目录下。当然，在制图过程中反复生成字库并不是一件愉快的事，所以一般我们会在制图时打开 <a href="https://gamebanana.com/mods/53736">Extended Chinese Font</a> 这个 Mod，它包含了一个较大的比较全面的字库，不过一般你不需要单独下这个 Mod，因为群服 Mod 就依赖这个 Mod，也有一部分 Mod 在发布时没有自己生成字库直接依赖了这个 Mod。  </p>
+<blockquote>
+<p><del>是的蔚蓝里没有 <code>蔚蓝</code> 两个字，这很合理</del></p>
+</blockquote>
+<h3 id="dialog"><code>Dialog</code> 文件</h3>
+<p>上述提到的文件叫 <code>Dialog</code> 文件，用于存放不同语言的文本，它的格式很简单：</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">键名</span><span class="o">=</span><span class="w"> </span><span class="s">键值</span>
+<span class="na">键名2</span><span class="o">=</span><span class="w"> </span><span class="s">键值2</span>
+<span class="na">其他键名</span><span class="o">=</span><span class="w"> </span><span class="s">其他键值...</span>
+</code></pre></div></td></tr></table></div>
+<p>一个键名等于一个键值。不过比较难受的一点是键名和等号之间不能有空格，否则会解析出现问题。键名建议只使用大小写字母，下划线和数字，避免出现一些可能的问题，此外键名在使用和被使用时对大小写不敏感，个人就建议用自己最舒服的大小写组合了。而键值相对宽松一点，除了比较自由的空白字符外还允许换行：</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>键名=
+    键
+    值能换
+    行还
+    算比
+    较方便
+键名a=写到一半允许
+    突然
+换
+            行
+</code></pre></div></td></tr></table></div>
+<p>在解析每一行时蔚蓝会丢弃掉左右出现的空白字符，所以不必担心有空白字符混进去，不过换行符依然会最终包括在解析结果内。</p>
+<h3 id="_8">生成的键名</h3>
+<p>在 <code>Everest</code> 中会自动为一些需要出现文本的地方生成键名，例如我们刚刚写下的指定地图集名字和章节名的两行 <code>Dialog</code>：</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Simplified Chinese.txt</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">ThisIsMyName_MyFirstMod</span><span class="o">=</span><span class="w"> </span><span class="s">我的 Mod 地图集名称！</span>
+<span class="na">ThisIsMyName_MyFirstMod_0_MyFirstMap</span><span class="o">=</span><span class="w"> </span><span class="s">你好这里是第一章！</span>
+</code></pre></div></td></tr></table></div>
+<p><code>Everest</code> 会参照文件夹路径生成一个键名，但是会将所有空白字符 <code></code>，连字符 <code>-</code>，斜杠 <code>/</code>，加号 <code>+</code> 全部转换为下滑线 <code>_</code>，就如上面的 <code>ThisIsMyName/MyFirstMod/0-MyFirstMap.bin</code> 就被转换为了 <code>ThisIsMyName_MyFirstMod_0_MyFirstMap</code>。  </p>
+<p>除此之外还有小节名 <code>ThisIsMyName_MyFirstMod_0_MyFirstMap_&lt;作为记录点房间的名字&gt;</code>：</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">ThisIsMyName_MyFirstMod_0_MyFirstMap_A_start</span><span class="o">=</span><span class="w"> </span><span class="s">第 一 节</span>
+<span class="na">ThisIsMyName_MyFirstMod_0_MyFirstMap_b_01</span><span class="o">=</span><span class="w"> </span><span class="s">第 二 节</span>
+</code></pre></div></td></tr></table></div>
+<p>如果你的图是 A 面，可以用 <code>A_start</code> 代替房间名表示第一小节的名字，否则默认是“开始”，B 面则是 <code>B_start</code>。  </p>
+<p>吃心后的结束语，加上 <code>poem_</code> 的前缀以及对应 AB 面名字的后缀 <code>_A</code> <code>_B</code>：</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">poem_ThisIsMyName_MyFirstMod_0_MyFirstMap_A</span><span class="o">=</span><span class="w"> </span><span class="s">恭喜通过本地图！ A</span>
+<span class="na">poem_ThisIsMyName_MyFirstMod_0_MyFirstMap_B</span><span class="o">=</span><span class="w"> </span><span class="s">恭喜通过本地图！ B</span>
+</code></pre></div></td></tr></table></div>
+<p>进图之前显示的明信片，加上 <code>_postcard</code> 的后缀，如果是 B C 面的话还要再在之前加上 <code>_b</code> <code>_c</code> 的后缀：</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">ThisIsMyName_MyFirstMod_0_MyFirstMap_postcard</span><span class="o">=</span><span class="w"> </span><span class="s">本地图非常散步，请放心游玩！（逃）</span>
+<span class="na">ThisIsMyName_MyFirstMod_0_MyFirstMap_b_postcard</span><span class="o">=</span><span class="w"> </span><span class="s">本地图 B 面也非常散步，请放心游玩！（逃）</span>
+<span class="na">ThisIsMyName_MyFirstMod_0_MyFirstMap_c_postcard</span><span class="o">=</span><span class="w"> </span><span class="s">本地图 C 面还是非常散步，请放心游玩！（逃）</span>
+</code></pre></div></td></tr></table></div>
+<p>B 面显示混音以及混音作者的文字，加上 <code>_remix</code> 和 <code>_remix_artist</code> 的后缀：</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">ThisIsMyName_MyFirstMod_0_MyFirstMap_remix</span><span class="o">=</span><span class="w"> </span><span class="s">超好听混音</span>
+<span class="na">ThisIsMyName_MyFirstMod_0_MyFirstMap_remix_artist</span><span class="o">=</span><span class="w"> </span><span class="s">不知名作者</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<p>此外明信片中的文字支持调整颜色，加入飘动特效等效果，这会在下一章剧情中提到。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class="md-copyright">
+                Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            <a href="https://icp.gov.moe/?keyword=20221437" class="md-copyright" target="_blank" rel="noopener">
+                萌ICP备20221437号
+            </a>
+        </div>
+    </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

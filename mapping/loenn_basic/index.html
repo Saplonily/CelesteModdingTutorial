@@ -18,7 +18,7 @@
         <link rel="prev" href="../mod_structure/">
       
       
-        <link rel="next" href="../room_and_meta/">
+        <link rel="next" href="../room_meta_text/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -524,12 +524,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../room_and_meta/" class="md-nav__link">
+      <a href="../room_meta_text/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    房间属性与元数据
+    房间属性，元数据，文本
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shared/graphics_dump/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphics Dump
     
   </span>
   
@@ -616,7 +639,7 @@
   
   
   <span class="md-ellipsis">
-    Code Mod 制作
+    皮肤 Mod 制作
     
   </span>
   
@@ -626,6 +649,74 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            皮肤 Mod 制作
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shared/graphics_dump/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphics Dump
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Code Mod 制作
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Code Mod 制作
           </label>
@@ -809,6 +900,7 @@
 <p class="admonition-title">颜色标识</p>
 <p>红色框内的为实体，浅蓝框内的为前景砖，橙色框内的为背景砖，绿色框内的为前景 Decal，浅紫色框内的为背景 Decal，浅绿色箭头指向的星星就是一种背景 <code>Stylegrounds</code>。</p>
 </div>
+<p>当然，官图中已有的元素是满足不了 Mapper 们的制图欲望的，所以就出现了 Helper 这种东西。Helper 也是 Mod 的一种，不过它是一种 Code Mod，即在代码层面对游戏增添了新的内容。在后续介绍一些常见的实体，Trigger 等时同样也会介绍一些常见的位于 Helper 中的东西。</p>
 <h2 id="_2">房间</h2>
 <h3 id="_3">基础</h3>
 <p>打开空的地图文件后，首先要做的是创建一个新的面，所以我们在菜单栏中选择 <code>Room -&gt; Add</code>：  </p>
@@ -818,6 +910,27 @@
 <p class="admonition-title">房间名称</p>
 <p>这里使用了 <code>a_01</code> 作为房间名称，这是一种推荐的取名方法，<code>小节标识_序号</code>，例如 <code>a_02</code> <code>a_03</code> <code>a_03_berry</code> <code>b_01</code> <code>c_01</code> <code>c_alt</code>，这在后续为你的地图添加 <code>Stylegrounds</code> 时提供很大的便利。</p>
 </div>
+<p>在此之前我们不妨认识一下游戏的坐标系。与通常的数学坐标系一样，不过 <code>y</code> 轴，也就是纵轴发生了翻转：  </p>
+<p><img alt="coord-flipped" src="../imgs/coord-flipped.png" /></p>
+<p><del>GeoGeBra 友情出演</del>  </p>
+<p>在作图中有两个需要关注的坐标系：全局坐标系和房间坐标系，房间坐标为物体相对于房间左上角原点的相对位置。在游戏中开启了调试模式后可以按下 <span class="keys"><kbd class="key-tilde">~</kbd></span> 键在左上角的信息框中查看：</p>
+<!-- ini 似乎还挺适合这个玩意的显示 -->
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">Area</span><span class="o">:</span><span class="w"> </span><span class="s">a_01 @ 12 (SID: ThisIsMyName/MyFirstMod/0-MyFirstMap)</span>
+<span class="na">Cursor @</span>
+<span class="w">  </span><span class="na">screen</span><span class="o">:</span><span class="w"> </span><span class="s">792, 407</span>
+<span class="w">  </span><span class="na">world</span><span class="o">:</span><span class="w">       </span><span class="s">-89, 524</span>
+<span class="w">  </span><span class="na">level</span><span class="o">:</span><span class="w">       </span><span class="s">39, 332</span>
+<span class="w">  </span><span class="na">level, /8</span><span class="o">:</span><span class="w">   </span><span class="s">4, 41</span>
+<span class="w">  </span><span class="na">level, snap</span><span class="o">:</span><span class="w"> </span><span class="s">32, 328</span>
+</code></pre></div></td></tr></table></div>
+<p>其中 <code>world</code> 后面的坐标为光标所在位置的全局坐标，<code>level</code> 则是房间坐标，此外还有 <code>/8</code> 和 <code>snap</code>，前者为房间坐标整除 <code>8</code> 的结果，也就是房间 <code>Tile</code> 坐标，后者为房间坐标对齐 <code>8px</code> 的结果，数值上与 <code>/8</code> 的值再乘 <code>8</code> 一致。<code>screen</code> 则是朴素的光标在屏幕上相对窗口的位置。<br />
+顺便我们还可以说说这个信息框的第一行是什么意思，<code>Area</code> 后跟的 <code>a_01</code> 为当前所在房间的名字，<code>@</code> 后跟的为章节 ID，这个 ID 是随着加载 Mod 的不同而变化的，再后面则是章节的 SID，这个是相对不变的，只要你不更改地图文件的位置。  </p>
 <p>有了这个房间之后，我们就可以来为其添加一些元素了，这里我们先认识一下 Loenn 右侧工具栏都有些什么：</p>
 <ul>
 <li><code>Brush</code>：刷子，用来刷 Tiles</li>
@@ -831,12 +944,17 @@
 <li><code>Room</code>：与房间相关的操作</li>
 </ul>
 <p>每选择了一项后下方的菜单栏也会变化，例如选择了 <code>Brush</code> 后会让你选择是涂前景砖还是背景砖，选择了 <code>Circle</code> 会让你选择是实心还是空心，选择了 <code>Placement</code> 会让你选择是放置实体，放置 Trigger 还是放置 Decal。当选中一项工具后，在房间内使用鼠标左键使用它，例如 <code>Brush</code> 模式下长按用来刷出一条砖，<code>Rectangle</code> 模式下长按用来放置出长方形的图块。在放置 Tile 时右边会有一栏用于选择 Tile 类型的选项，其中 <code>Air</code> 相当于清除 Tile，其余的选项均是游戏本体中出现的 Tile，你可以自行放置来看看它们都分别代表什么。（除了 <code>Template</code>，那是一个用来自定义 Tile 的模板，这在后面我们会说到）  </p>
-<p>要让你的房间能够正常游玩，至少需要一个 <code>Player (Spawn Point)</code>，也就是标识重生点的实体。现在，你可以为你的房间涂上一块作为地板的前景砖，然后选择 <code>Placement</code>，在右下角的搜索框中搜索重生点的实体（<code>Player (Spawn Point)</code>）并放置，然后在游戏中进入你的第一张地图了。</p>
+<p>要让你的房间能够正常游玩，至少需要一个 <code>Player (Spawn Point)</code>，也就是标识重生点的实体。现在，你可以为你的房间涂上一块作为地板的前景砖，然后选择 <code>Placement</code>，在右下角的搜索框中搜索重生点的实体（<code>Player (Spawn Point)</code>）并放置，按下保存按钮或者保存快捷键 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>，在游戏中进入你的第一张地图了。</p>
 <details class="info">
 <summary>记得放重生点</summary>
 <p><del>当你记得放重生点后你就已经超越大佬了</del><br />
 <img alt="forgot-spawn-point" src="../imgs/forgot-spawn-point.png" /></p>
 </details>
+<div class="admonition info">
+<p class="admonition-title">勤保存</p>
+<p>请时刻记得多按按保存，以防突发状况丢掉你的制图进度，此外大多时候你做了一点更改后都要进游戏看效果，此时你也需要保存来让它生效，总之勤保存总没问题。如果你真的很不幸丢失了你的进度，你可以碰碰运气在资源管理器的地址栏敲 <code>%LOCALAPPDATA%/Loenn/Backups</code> 或者如果你因为中文用户名的原因使用了带 <code>--portable</code> 的 Loenn，到 Loenn 本体目录的 Loenn 里的 <code>Backups</code>目录，来看看 Loenn 有没有恰好做了一份你的地图文件的备份。<br />
+<sub>在这里为那些丢掉大量进度的人默哀</sub> <sub>1</sub> <sub>分钟。</sub></p>
+</div>
 <p>此外是一些基础的操作：使用鼠标右键并拖拽来移动视野，滚动鼠标滚轮来放大缩小视野。当房间太多时可以左键选择旁边的房间列表来快速将视野跳转到对应房间。选中房间时，房间四周会有八个三角形，按住并拖拽它们就能更改房间的大小。在 Loenn 的新版中，放置房间的操作变得更简单了，对比之前你需要反复在菜单栏中选择 <code>Room-&gt;New</code>，现在我们可以直接选择工具栏中的 <code>Room</code> 然后选择 <code>Place Room</code> 直接拖拽拉出一个房间来，使用 <code>Select Room</code> 来选择一个房间并移动它。  </p>
 <h3 id="_4">物体</h3>
 <p>要说制图中重要的东西，那么放置实体，Trigger，Decal，Tile 这些物体是必不可少的。当选择了 <code>Selection</code> 工具后，对于大多数物体都有这些操作：</p>
@@ -855,7 +973,7 @@
 <li><span class="keys"><kbd class="key-shift">Shift</kbd></span> + 左键拖动：只允许轴向拖动物体，即只允许上下移动或左右移动</li>
 <li>对于大多数移动操作，同时按下 <span class="keys"><kbd class="key-control">Ctrl</kbd></span> 键操作时，对齐方式将会使用 <code>1px</code> 对齐而不是 <code>8px</code>（<code>tile</code>）对齐</li>
 </ul>
-<p>当实体，Trigger，Decal 被选中时，按下鼠标右键可以打开它的属性窗口从而调整一些物体的参数。例如对于冲刺水晶来说，它有个 <code>oneUse</code> 属性决定是否是一次性的，有个 <code>twoDash</code> 属性决定是单冲水晶还有双冲水晶。  </p>
+<p>当实体，Trigger，Decal 被选中时，按下鼠标右键可以打开它的属性窗口从而调整一些物体的参数。例如对于冲刺水晶来说，它有个 <code>oneUse</code> 属性决定是否是一次性的，有个 <code>twoDash</code> 属性决定是单冲水晶还有双冲水晶。不过记得在更改完属性后按下 <code>Save Changes</code> 按钮保存更改，这一点很多人经常忘记。  </p>
 <p>对于有大小和方向的实体以及 Decal 和 Trigger，可以拖拽它们的边框来放大和缩小，此外还有如下快捷键：</p>
 <ul>
 <li><span class="keys"><kbd class="key-q">Q</kbd></span>，<span class="keys"><kbd class="key-e">E</kbd></span>：减小宽度 / 增大宽度</li>
@@ -912,11 +1030,11 @@ Trigger 是一块长方形区域，当玩家进入后会触发一些事情，在
 <p><img alt="a-good-change-respawn-trigger" src="../imgs/a-good-change-respawn-trigger.png" /></p>
 <h2 id="decal">Decal</h2>
 <p>Decal 这一块在操作上非常简单&#8203;<del>，在美术上非常困难</del>&#8203;，除了位置外它们能更改的属性只有缩放大小，旋转角度，颜色以及图层高低。<br />
-当然，为了简化操作，不要忘记上述的有关更改大小，位置和旋转的按键对 Decal 也有效。</p>
+当然，为了简化操作，不要忘记上述的有关更改大小，位置和旋转的按键对 Decal 也有效。&#8203;<del>也不要忘记改了属性后要点 <code>Save Changes</code> 保存。</del></p>
 <hr />
 <p>至此，你就掌握了很基础的 Loenn 操作和一些游戏的基础元素。在下面一章会介绍更多有关房间的属性，还有地图的元数据等。</p>
 <h2 id="_7">参考</h2>
-<p>Loenn 的菜单栏各按钮功能参考：</p>
+<p>Loenn 的菜单栏各按钮功能：</p>
 <ul>
 <li><code>File</code>：文件<ul>
 <li><code>New</code>：新建</li>

@@ -479,12 +479,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../room_and_meta/" class="md-nav__link">
+      <a href="../room_meta_text/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    房间属性与元数据
+    房间属性，元数据，文本
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shared/graphics_dump/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphics Dump
     
   </span>
   
@@ -571,7 +594,7 @@
   
   
   <span class="md-ellipsis">
-    Code Mod 制作
+    皮肤 Mod 制作
     
   </span>
   
@@ -581,6 +604,74 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            皮肤 Mod 制作
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shared/graphics_dump/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphics Dump
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Code Mod 制作
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Code Mod 制作
           </label>
@@ -714,7 +805,7 @@
 <h2 id="mod_1">Mod 文件夹的结构</h2>
 <p>一般地，一个包含可游玩地图的 Mod 有这样的结构：</p>
 <ul>
-<li>📁 <code>Dialog</code>：包含不同语言的游戏中出现的文字</li>
+<li>📁 <code>Dialog</code>：包含游戏中出现的不同语言的文本</li>
 <li>📁 <code>Graphics</code>：存放游戏中与画面相关的资源</li>
 <li>📁 <code>Maps</code>：存放地图文件</li>
 <li>📄 <code>everest.yaml</code>：<code>Everest</code> 用来识别你的 Mod 的“Mod 信息清单”</li>
@@ -730,7 +821,7 @@
 我们清楚我们正在做什么，所以我们选择 <code>是(Y)</code>。</p>
 </div>
 <h3 id="everestyaml"><code>everest.yaml</code> 文件</h3>
-<p>这是一个 <code>yaml</code> 格式的文件，不过在这里你并不需要掌握 <code>yaml</code> 格式，对于一个普通的 Mod 来说，你只需要写下如下行内容，其余内容 Loenn 会自动帮你填写：</p>
+<p>这是一个 <code>yaml</code> 格式的文件，不过在这里你并不需要掌握 <code>yaml</code> 格式，对于一个普通的 Mod 来说，你只需要用任何文本编辑器打开并写下如下行内容，其余内容 Loenn 会自动帮你填写：</p>
 <div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">everest.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -743,7 +834,7 @@
 </code></pre></div></td></tr></table></div>
 <div class="admonition note">
 <p class="admonition-title">注意</p>
-<p><code>yaml</code> 格式对空格非常敏感，这里建议直接复制上面的内容并更改需要的地方。</p>
+<p><code>yaml</code> 格式对空格非常敏感，这里建议直接复制上面的内容并更改需要的地方。不过后面为了让我们的 Mod 更加多彩，通常会接触到更多 <code>YAML</code> 以及 <code>XML</code> ，为了让这些文件更容易编辑，我会推荐使用 <a href="https://code.visualstudio.com"><code>VS Code</code></a> 作为编辑器并安装上 <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml"><code>YAML</code></a> 和 <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml"><code>XML</code></a> 插件。</p>
 </div>
 <p>在如上文件中，第一行写明了你 Mod 的名字，或者更准确一点，<code>ID</code>。这并不是你 Mod 显示的名字，而是一个唯一的标识符，它用于 <code>Everest</code> 内部加载标识你的 Mod，也用于 Mod 的更新检测，两个相同 <code>ID</code> 的 Mod 会被视为同一个 Mod。所以确保你的 <code>ID</code> 是唯一的。这里建议只使用大小写英文字母以及下划线和空格，尽量不要使用其它字符。<br />
 第二行 <code>Version</code> 后面写明了你 Mod 的版本，每当你需要为你的地图做出更新时，你需要更新这一项，以区别于该 Mod 的其他版本，更新检测时就会用到这一项来判断哪个版本是最新的。版本的格式是 <code>x.y.z</code>，其中 <code>x</code> 表示主版本，<code>y</code> 表示次版本，<code>z</code> 表示补丁版本。一般来说，<code>x</code> 的更改见于你的 Mod 发生了非常大的更新，例如，用 <code>0</code> 表示该 Mod 还是一个未完工版本，用 <code>1</code> 表示该 Mod 已经完成了主干部分，随后每当该 Mod 迎来例如新增或重做了若干章节等大更新， <code>x</code> 就会 +1。<code>y</code> 的增加适用于一些一般的更新，例如某一张图中新增了若干草莓，若干彩蛋面，或者重做了一部分面等。<code>z</code>一般用于小规模更新，例如修复了某些可以偷鸡的地方，改善了部分装饰或者微调物体等。不过这些并不是强制的，只需要它能传达出你想表达的意思即可。<br />
