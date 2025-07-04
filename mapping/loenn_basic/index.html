@@ -930,7 +930,7 @@
 <span class="w">  </span><span class="na">level, snap</span><span class="o">:</span><span class="w"> </span><span class="s">32, 328</span>
 </code></pre></div></td></tr></table></div>
 <p>其中 <code>world</code> 后面的坐标为光标所在位置的全局坐标，<code>level</code> 则是房间坐标，此外还有 <code>/8</code> 和 <code>snap</code>，前者为房间坐标整除 <code>8</code> 的结果，也就是房间 <code>Tile</code> 坐标，后者为房间坐标对齐 <code>8px</code> 的结果，数值上与 <code>/8</code> 的值再乘 <code>8</code> 一致。<code>screen</code> 则是朴素的光标在屏幕上相对窗口的位置。<br />
-顺便我们还可以说说这个信息框的第一行是什么意思，<code>Area</code> 后跟的 <code>a_01</code> 为当前所在房间的名字，<code>@</code> 后跟的为章节 ID，这个 ID 是随着加载 Mod 的不同而变化的，再后面则是章节的 SID，这个是相对不变的，只要你不更改地图文件的位置。  </p>
+顺便我们还可以说说这个信息框的第一行是什么意思，<code>Area</code> 后跟的 <code>a_01</code> 为当前所在房间的名字，<code>@</code> 后跟的为地图 ID，这个 ID 是随着加载 Mod 的不同而变化的，这个 ID 就可以用于 <code>load</code> 指令。再后面则是章节的 SID，这个是相对不变的，只要你不更改地图文件的位置。  </p>
 <p>有了这个房间之后，我们就可以来为其添加一些元素了，这里我们先认识一下 Loenn 右侧工具栏都有些什么：</p>
 <ul>
 <li><code>Brush</code>：刷子，用来刷 Tiles</li>

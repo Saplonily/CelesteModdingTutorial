@@ -807,7 +807,7 @@ Loenn 开源在 <a href="https://github.com/CelestialCartographers/Loenn">GitHub
 <li><code>Loenn-v1.0.3-linux.zip</code></li>
 </ul>
 <p>一般大概率你都在 <code>Windows</code> 平台上，此时你需要下载 <code>windows</code> 结尾的压缩包。<br />
-下载完毕后，解压压缩包，然后将整个文件夹放到一个你能找到的地方，然后双击 <code>Lönn.exe</code> 就能打开 Loenn 了。此时你应该能看到它默认打开了 7a：</p>
+下载完毕后，解压压缩包，然后将整个文件夹放到一个你能找到的地方，然后双击 <code>Lönn.exe</code> 就能打开 Loenn 了。此时你应该能看到它默认打开了 7A：</p>
 <p><img alt="Loenn-7a" src="../imgs/loenn-7a.png" /></p>
 <h2 id="_2">可能遇到的问题</h2>
 <h3 id="_3">未找到蔚蓝</h3>
@@ -838,7 +838,53 @@ IF YOU DRAG CELESTE.EXE IN, YOU WILL HAVE TO MANUALLY CLOSE THE DIALOG WINDOW.</
 <li>FMOD 实时调试：允许你调试游戏内播放的音乐，这会在你为地图添加音乐时用到。</li>
 <li><code>everest.yaml</code> 错误警告：让 <code>Everest</code> 在解析到有问题的 <code>everest.yaml</code> 时发出警告。</li>
 </ul>
-<p>一切就绪后，开始新建你的第一个 Mod 的文件夹吧！<del>（史诗级大作：<code>新建文件夹</code>）</del></p>
+<h2 id="_6">调试模式</h2>
+<p>调试模式（<code>Debug</code> 模式）在原版中就已存在，用来方便开发者和测试者，在 <code>Everest</code> 中它也被增强为了 Mapper 们更好的体验。目前调试模式包含但不仅限于以下功能：</p>
+<h3 id="_7">调试存档</h3>
+<p>主界面会出现 <code>~调试~</code> 选项，进入后即为调试存档。在调试存档中，有以下几个特殊功能：</p>
+<ul>
+<li>地图默认全部解锁</li>
+<li>拾取过的草莓、磁带、心不会变蓝</li>
+<li>心门不要求收集的心的数目（你也收集不了）</li>
+<li>完成关卡后统计数据会被重置（在调试存档内，不包括死亡数）</li>
+</ul>
+<p>同时 <code>CelesteTAS</code> 这个 Mod 在播放 TAS 时也会使用这个存档进行演示。</p>
+<h3 id="_8">调试控制台</h3>
+<p>按下 <span class="keys"><kbd class="key-tilde">~</kbd></span> 可以在任何地方打开控制台，在这里你可以输入各种指令。打开控制台的状态下同时也会打开实体的调试显示，对于大多数实体这会显示它们的碰撞箱，还有左上角的一些坐标信息显示。<br />
+例如，在关卡内时，打开控制台并输入 <code>give_golden</code>，按下 <span class="keys"><kbd class="key-enter">Enter</kbd></span>，你就会得到一颗金草莓，而 <code>givekey</code> 会让你得到一把钥匙。<code>load &lt;ID&gt;</code> 将 <code>&lt;ID&gt;</code> 替换为地图的 ID 后，你可以快捷进入某些地图，官图中从序章到再见，包括尾声，这些章节的 ID 从 <code>0</code> 到 <code>10</code> 递增。  </p>
+<p>如果你需要既能看到碰撞箱，信息面板，又能移动。那么你可以安装 <code>CelesteTAS</code> Mod，在这个 Mod 下你可以按下默认 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-b">B</kbd></span> 显示更好的碰撞箱，此外该 Mod 也增强了控制台状态时左上角的信息显示。  </p>
+<p><img alt="debug-console" src="../imgs/debug-console.png" /></p>
+<h3 id="_9">小地图</h3>
+<p>按下 <span class="keys"><kbd class="key-f6">F6</kbd></span> 可以在地图内打开小地图，小地图中可以显示地图整体的预览，其中：</p>
+<ul>
+<li>红色小点表示玩家的重生点</li>
+<li>黄色长条表示单向板</li>
+<li>纯色部分表示前景砖</li>
+</ul>
+<p>在小地图上可以：</p>
+<ul>
+<li>鼠标右键/确定键：传送到距离光标最近的重生点<ul>
+<li>同时按住 <span class="keys"><kbd class="key-control">Ctrl</kbd></span>：在传送之前重置整个地图</li>
+<li>同时按住 <span class="keys"><kbd class="key-shift">Shift</kbd></span>：直接传送到光标位置</li>
+</ul>
+</li>
+<li>按下 <span class="keys"><kbd class="key-q">Q</kbd></span>：显示草莓的位置</li>
+<li>按下 <span class="keys"><kbd class="key-f1">F1</kbd></span>：显示钥匙的位置</li>
+<li>按下 <span class="keys"><kbd class="key-f2">F2</kbd></span>：将视野拉回到当前重生点位置</li>
+<li>按下 <span class="keys"><kbd class="key-f5">F5</kbd></span>：隐藏右下角那段文字</li>
+</ul>
+<p><img alt="debug-map" src="../imgs/debug-map.png" /></p>
+<h3 id="_10">观山</h3>
+<p>在选章界面时可以自由观山。按下默认 <span class="keys"><kbd class="key-space">Space</kbd></span> 即可进入自由移动模式，鼠标左键拖动视角，默认 <span class="keys"><kbd class="key-w">W</kbd></span> <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-a">A</kbd></span> <span class="keys"><kbd class="key-d">D</kbd></span> 向前 向后 向左 向右移动位置，同时左上角会显示当前的位置和视角信息。</p>
+<h3 id="_11">资源重载</h3>
+<p>开启了调试模式后文件夹形式的 Mod 会被 <code>Everest</code> 自动热重载，也就是可以及时响应到游戏内，此外还有如下按键：</p>
+<ul>
+<li><span class="keys"><kbd class="key-f1">F1</kbd></span>，<span class="keys"><kbd class="key-f2">F2</kbd></span>，<span class="keys"><kbd class="key-f3">F3</kbd></span>：原版用于调试重载资源的按键，现版本只有重进关卡的作用</li>
+<li><span class="keys"><kbd class="key-f5">F5</kbd></span>：重新加载整个地图</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f5">F5</kbd></span>：快速重启整个游戏</li>
+</ul>
+<hr />
+<p>一切就绪后，开始新建你的第一个 Mod 文件夹吧！<del>（史诗级大作：<code>新建文件夹</code>）</del></p>
 
 
 
