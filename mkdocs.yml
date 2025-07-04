@@ -68,8 +68,11 @@ nav:
     - "软件安装, 游戏配置": "mapping/basic_env.md"
     - "Mod 结构": "mapping/mod_structure.md"
     - "Loenn 基础": "mapping/loenn_basic.md"
-    - "房间属性与元数据": "mapping/room_and_meta.md"
+    - "房间属性，元数据，文本": "mapping/room_meta_text.md"
+    - "Graphics Dump": "shared/graphics_dump.md"
     - "常用参考": "mapping/reference.md"
     - "Dialog": "mapping/dialog.md"
+  - "皮肤 Mod 制作":
+    - "Graphics Dump": "shared/graphics_dump.md"
   - "Code Mod 制作":
     - "环境配置": "code_modding/env.md"
