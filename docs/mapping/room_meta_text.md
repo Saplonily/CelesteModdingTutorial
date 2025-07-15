@@ -447,7 +447,7 @@ Mountain:
 <!---- 这不是 ini 但是高亮还挺不错，不是么 -->
 ```ini title="English.txt"
 ThisIsMyName_MyFirstMod= Name of my first mod's maps!
-ThisIsMyName_MyFirstMod_0_MyFirstMap= Hi here's the chapter1!
+ThisIsMyName_MyFirstMod_0_MyFirstMap= Hi here's the chapter 1!
 ```
 
 ```ini title="Simplified Chinese.txt"
@@ -511,6 +511,17 @@ ThisIsMyName_MyFirstMod_0_MyFirstMap= 一张蔚蓝地图的名字
 ThisIsMyName_MyFirstMod= 我的 Mod 地图集名称！
 ThisIsMyName_MyFirstMod_0_MyFirstMap= 你好这里是第一章！
 ```
+在基础设置之外，如果你安装了`Maddie's Helping Hand`这个mod，那么你可以将原本地图章节名称上方类似于`第1章`的文字进行更改，具体的格式如下：
+```
+maddiehelpinghand_chapternumber_地图bin路径= 章节序号名
+```
+应用到前文所说的例子中，则应该看起来是这样：
+```
+maddiehelpinghand_chapternumber_ThisIsMyName_MyFirstMod_0_MyFirstMap= 章节01
+```
+*ThisIsMyName_MyFirstMod_0_MyFirstMap 对应文件路径 ThisIsMyName/MyFirstMod/0-MyFirstMap.bin*
+
+设置完成后你会发现在原版游戏地图中的`第1章`字样变成了你设置的`章节01`，在有一些情况下，这种独特的章节序号文字可以辅助你表达你的地图名字的特别之处，例如`xxx竞赛-比赛用图`。
 
 `Everest` 会参照文件夹路径生成一个键名，但是会将所有空白字符 ` `，连字符 `-`，斜杠 `/`，加号 `+` 全部转换为下滑线 `_`，就如上面的 `ThisIsMyName/MyFirstMod/0-MyFirstMap.bin` 就被转换为了 `ThisIsMyName_MyFirstMod_0_MyFirstMap`。  
 
